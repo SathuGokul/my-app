@@ -6,6 +6,7 @@ const app = express();
 
 //using ejs as view engine
 app.set('view engine', 'ejs');
+//static file
 app.get("/", (req, res) =>{ //root & callback func with request and response
     res.render("login");
 })
