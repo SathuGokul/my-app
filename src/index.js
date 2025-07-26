@@ -1,11 +1,12 @@
 const express = require('express');
 const path = require("path");
 const bcrypt = require("bcrypt");
-
 const app = express();
 
 //using ejs as view engine
 app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'public')));
+
 //static file
 app.get("/", (req, res) =>{ //root & callback func with request and response
     res.render("login");
